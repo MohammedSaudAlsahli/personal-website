@@ -5,9 +5,15 @@ export const ThemeToggle = () => {
   return (
     <Button
       onClick={() => setColorScheme(colorScheme === "dark" ? "light" : "dark")}
-      size="xs"
+      size="compact-sm"
+      variant="transparent"
+      //   color="dark"
     >
-      {colorScheme === "dark" ? <FaSun size="24px" /> : <FaMoon size="24px" />}
+      {colorScheme === "dark" ? (
+        <FaSun size="24px" color="white" />
+      ) : (
+        <FaMoon size="24px" color="black" />
+      )}
     </Button>
   );
 };
