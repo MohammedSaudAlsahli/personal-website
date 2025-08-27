@@ -5,6 +5,30 @@ import { MantineLogo } from "@mantinex/mantine-logo";
 import classes from "./FooterSocial.module.css";
 
 export const Footer = () => {
+  const Icons = [
+    {
+      Icon: AiOutlineGithub,
+      href: "https://www.github.com/MohammedSaudAlsahli",
+    },
+    { Icon: AiOutlineX, href: "https://www.x.com/MSaudAlsahli" },
+    {
+      Icon: AiFillLinkedin,
+      href: "https://www.linkedin.com/in/mohammed-saud-alsahli/",
+    },
+  ];
+  const actionIcons = Icons.map(({ Icon, href }) => (
+    <ActionIcon
+      size="lg"
+      color="gray"
+      variant="default"
+      component="a"
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Icon size={18} />
+    </ActionIcon>
+  ));
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
@@ -15,18 +39,8 @@ export const Footer = () => {
           justify="flex-end"
           wrap="nowrap"
         >
-          <ActionIcon
-            size="lg"
-            color="gray"
-            variant="default"
-            component="a"
-            href="https://www.github.com/MohammedSaudAlsahli"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <AiOutlineGithub size={18} />
-          </ActionIcon>
-          <ActionIcon
+          {actionIcons}
+          {/* <ActionIcon
             size="lg"
             color="gray"
             variant="default"
@@ -47,7 +61,7 @@ export const Footer = () => {
             rel="noopener noreferrer"
           >
             <AiFillLinkedin size={18} />
-          </ActionIcon>
+          </ActionIcon> */}
         </Group>
       </Container>
     </div>
