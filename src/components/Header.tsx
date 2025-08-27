@@ -1,29 +1,47 @@
 import { ThemeToggle } from "./ThemeToggle";
-import { NavigationProgress } from "@mantine/nprogress";
+import { useState } from "react";
+import { Burger, Container, Group } from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
+import { MantineLogo } from "@mantinex/mantine-logo";
+import classes from "./HeaderSimple.module.css";
 
-import { Box, Group, Text, Flex } from "@mantine/core";
+const links = [
+  { link: "/about", label: "Features" },
+  { link: "/pricing", label: "Pricing" },
+  { link: "/learn", label: "Learn" },
+  { link: "/community", label: "Community" },
+];
+
 export const Header = () => {
-  return (
-    <Flex
-      justify="space-between"
-      align="center"
-      p="md"
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        borderBottom: "1px solid var(--mantine-color-gray-7)",
-        boxShadow: "var(--mantine-shadow-sm)",
+  const [opened, { toggle }] = useDisclosure(false);
+  const [active, setActive] = useState(links[0].link);
+
+  const items = links.map((link) => (
+    <a
+      key={link.label}
+      href={link.link}
+      className={classes.link}
+      data-active={active === link.link || undefined}
+      onClick={(event) => {
+        event.preventDefault();
+        setActive(link.link);
       }}
     >
-      <Text fw={700}>LOGO</Text>
+      {link.label}
+    </a>
+  ));
 
-      <Text>Home</Text>
-      <Text>About</Text>
-      <Text>Contact</Text>
+  return (
+    <header className={classes.header}>
+      <Container size="md" className={classes.inner}>
+        <MantineLogo size={28} />
+        <Group gap={5} visibleFrom="xs">
+          {items}
+        </Group>
+        <ThemeToggle />
 
-      <ThemeToggle />
-    </Flex>
+        <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
+      </Container>
+    </header>
   );
 };

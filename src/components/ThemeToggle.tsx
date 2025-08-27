@@ -1,19 +1,19 @@
-import { Button, useMantineColorScheme } from "@mantine/core";
-import { FaMoon, FaSun } from "react-icons/fa";
+import { useMantineColorScheme, ActionIcon } from "@mantine/core";
+import { AiOutlineSun, AiFillMoon } from "react-icons/ai";
 export const ThemeToggle = () => {
   const { colorScheme, setColorScheme } = useMantineColorScheme();
   return (
-    <Button
+    <ActionIcon
       onClick={() => setColorScheme(colorScheme === "dark" ? "light" : "dark")}
-      size="compact-sm"
-      variant="transparent"
-      //   color="dark"
+      size="lg"
+      color="gray"
+      variant="default"
     >
       {colorScheme === "dark" ? (
-        <FaSun size="24px" color="white" />
+        <AiOutlineSun size={18} />
       ) : (
-        <FaMoon size="24px" color="black" />
+        <AiFillMoon size={18} />
       )}
-    </Button>
+    </ActionIcon>
   );
 };
