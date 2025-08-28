@@ -8,6 +8,8 @@ export const ThemeToggle = () => {
       size="lg"
       color="gray"
       variant="default"
+      title={"Theme toggle"}
+
     >
       {colorScheme === "dark" ? (
         <AiOutlineSun size={18} />

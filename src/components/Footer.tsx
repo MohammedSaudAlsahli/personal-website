@@ -1,6 +1,6 @@
 import { AiOutlineX, AiOutlineGithub, AiFillLinkedin } from "react-icons/ai";
 
-import { ActionIcon, Container, Group } from "@mantine/core";
+import { ActionIcon, Box, Container, Group } from "@mantine/core";
 import { MantineLogo } from "@mantinex/mantine-logo";
 import classes from "./FooterSocial.module.css";
 
@@ -34,7 +34,7 @@ export const Footer = () => {
     </ActionIcon>
   ));
   return (
-    <div className={classes.footer}>
+    <Box component="footer" className={classes.footer} mt="auto">
       <Container className={classes.inner}>
         <MantineLogo size={28} />
         <Group
@@ -46,6 +46,6 @@ export const Footer = () => {
           {actionIcons}
         </Group>
       </Container>
-    </div>
+    </Box>
   );
 };
