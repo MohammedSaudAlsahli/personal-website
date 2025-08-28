@@ -9,22 +9,26 @@ export const Footer = () => {
     {
       Icon: AiOutlineGithub,
       href: "https://www.github.com/MohammedSaudAlsahli",
+      title: "Github",
     },
-    { Icon: AiOutlineX, href: "https://www.x.com/MSaudAlsahli" },
+    { Icon: AiOutlineX, href: "https://www.x.com/MSaudAlsahli", title: "X" },
     {
       Icon: AiFillLinkedin,
       href: "https://www.linkedin.com/in/mohammed-saud-alsahli/",
+      title: "Linkedin",
     },
   ];
-  const actionIcons = Icons.map(({ Icon, href }) => (
+  const actionIcons = Icons.map(({ Icon, href, title }) => (
     <ActionIcon
-      size="lg"
-      color="gray"
-      variant="default"
-      component="a"
+      size={"lg"}
+      key={title}
+      color={"gray"}
+      variant={"default"}
+      component={"a"}
       href={href}
-      target="_blank"
-      rel="noopener noreferrer"
+      target={"_blank"}
+      rel={"noopener noreferrer"}
+      title={title}
     >
       <Icon size={18} />
     </ActionIcon>
@@ -36,32 +40,10 @@ export const Footer = () => {
         <Group
           gap={"sm"}
           className={classes.links}
-          justify="flex-end"
-          wrap="nowrap"
+          justify={"flex-end"}
+          wrap={"nowrap"}
         >
           {actionIcons}
-          {/* <ActionIcon
-            size="lg"
-            color="gray"
-            variant="default"
-            component="a"
-            href="https://www.x.com/MSaudAlsahli"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <AiOutlineX size={18} />
-          </ActionIcon>
-          <ActionIcon
-            size="lg"
-            color="gray"
-            variant="default"
-            component="a"
-            href="https://www.linkedin.com/in/mohammed-saud-alsahli/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <AiFillLinkedin size={18} />
-          </ActionIcon> */}
         </Group>
       </Container>
     </div>

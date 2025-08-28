@@ -1,6 +1,6 @@
 import { ThemeToggle } from "./ThemeToggle";
 import { useState } from "react";
-import { Burger, Container, Group } from "@mantine/core";
+import { Burger, Container, Group, Collapse } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { MantineLogo } from "@mantinex/mantine-logo";
 import classes from "./HeaderSimple.module.css";
@@ -13,7 +13,7 @@ const links = [
 ];
 
 export const Header = () => {
-  const [opened, { toggle }] = useDisclosure(false);
+  const [opened, { toggle, close }] = useDisclosure(false);
   const [active, setActive] = useState(links[0].link);
 
   const items = links.map((link) => (
@@ -25,6 +25,7 @@ export const Header = () => {
       onClick={(event) => {
         event.preventDefault();
         setActive(link.link);
+        close();
       }}
     >
       {link.label}
@@ -42,6 +43,9 @@ export const Header = () => {
 
         <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
       </Container>
+      <Collapse in={opened} hiddenFrom="xs">
+        {items}
+      </Collapse>
     </header>
   );
 };
