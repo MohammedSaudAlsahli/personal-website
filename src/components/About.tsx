@@ -8,12 +8,12 @@ const aboutData = {
 
 export const About = () => {
   return (
-    <Container my="xl">
-      <Stack align="center" gap="xl">
-        <Title order={1} ta="center">
+    <Container my={"xl"} pb={"xl"}>
+      <Stack align={"center"} gap={"xl"}>
+        <Title order={1} ta={"center"}>
           {aboutData.catchyLine}
         </Title>
-        <Text size="lg" ta="center" maw={600}>
+        <Text size={"lg"} ta={"center"} maw={600}>
           {aboutData.description}
         </Text>
       </Stack>

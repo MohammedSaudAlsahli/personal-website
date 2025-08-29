@@ -25,7 +25,11 @@ const themeIcon = Icons.map(({ Icon, title }) => (
 
 export const Experience = () => {
   return (
-    <Center display={"flex"} style={{ flexDirection: "column", gap: "5rem" }}>
+    <Center
+      display={"flex"}
+      pt={"xl"}
+      style={{ flexDirection: "column", gap: "3rem" }}
+    >
       <Text fw={"bold"} size={"xl"}>
         EXPERIENCE WITH
       </Text>
