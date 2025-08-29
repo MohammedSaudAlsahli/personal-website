@@ -1,23 +1,23 @@
-import { useMantineColorScheme, ActionIcon } from "@mantine/core";
-import { AiOutlineSun, AiOutlineMoon } from "react-icons/ai";
+import { ActionIcon, useMantineColorScheme } from "@mantine/core";
+import { AiOutlineMoon, AiOutlineSun } from "react-icons/ai";
 
 export const ThemeToggle = () => {
-  const { colorScheme, setColorScheme } = useMantineColorScheme();
-  const toggleColorScheme = () =>
-    setColorScheme(colorScheme === "dark" ? "light" : "dark");
+	const { colorScheme, setColorScheme } = useMantineColorScheme();
+	const toggleColorScheme = () =>
+		setColorScheme(colorScheme === "dark" ? "light" : "dark");
 
-  return (
-    <ActionIcon
-      onClick={toggleColorScheme}
-      size={"lg"}
-      variant={"default"}
-      title={"Toggle theme"}
-    >
-      {colorScheme === "dark" ? (
-        <AiOutlineSun size={18} />
-      ) : (
-        <AiOutlineMoon size={18} />
-      )}
-    </ActionIcon>
-  );
+	return (
+		<ActionIcon
+			onClick={toggleColorScheme}
+			size={"lg"}
+			variant={"default"}
+			title={"Toggle theme"}
+		>
+			{colorScheme === "dark" ? (
+				<AiOutlineSun size={18} />
+			) : (
+				<AiOutlineMoon size={18} />
+			)}
+		</ActionIcon>
+	);
 };

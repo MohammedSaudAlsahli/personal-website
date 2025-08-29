@@ -1,9 +1,9 @@
-import { ThemeToggle } from "./ThemeToggle";
-import { useState } from "react";
-import { Burger, Container, Group, Collapse, Box } from "@mantine/core";
+import { Box, Burger, Collapse, Container, Group } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { MantineLogo } from "@mantinex/mantine-logo";
+import { useState } from "react";
 import classes from "./HeaderSimple.module.css";
+import { ThemeToggle } from "./ThemeToggle";
 
 const links = [
   { link: "/about", label: "About" },

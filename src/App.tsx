@@ -1,16 +1,17 @@
-import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
-import { Experience } from "./components/Experience";
 import { Box } from "@mantine/core";
 import { About } from "./components/About";
-
+import { Experience } from "./components/Experience";
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
+import { Projects } from "./components/Projects";
 export const App = () => {
-  return (
-    <Box display={"flex"} mih={"100vh"} style={{ flexDirection: "column" }}>
-      <Header />
-      <About />
-      <Experience />
-      <Footer />
-    </Box>
-  );
+	return (
+		<Box display={"flex"} mih={"100vh"} style={{ flexDirection: "column" }}>
+			<Header />
+			<About />
+			<Experience />
+			<Projects />
+			<Footer />
+		</Box>
+	);
 };
