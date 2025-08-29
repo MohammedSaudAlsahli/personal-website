@@ -1,0 +1,241 @@
+{
+    "aboutData": {
+        "catchyLine": {
+            "en": "I build SaaS apps and experiment with AI models!",
+            "ar": "أبني تطبيقات SaaS وأجرب نماذج الذكاء الاصطناعي!"
+        },
+        "description": {
+            "en": "I’m a passionate software developer exploring the intersection of AI and modern web development. My focus is on creating scalable SaaS applications and integrating AI-powered features to solve real-world problems.",
+            "ar": "أنا مطوّر برمجيات شغوف أستكشف التقاطع بين الذكاء الاصطناعي وتطوير الويب الحديث. تركيزي على بناء تطبيقات SaaS قابلة للتوسع ودمج ميزات مدعومة بالذكاء الاصطناعي لحل مشكلات واقعية."
+        }
+    },
+    "experienceICONS": [
+        {
+            "Icon": "SiHtml5",
+            "title": {
+                "en": "HTML",
+                "ar": "إتش تي إم إل"
+            }
+        },
+        {
+            "Icon": "FaJsSquare",
+            "title": {
+                "en": "Javascript",
+                "ar": "جافاسكربت"
+            }
+        },
+        {
+            "Icon": "RiReactjsFill",
+            "title": {
+                "en": "React.js",
+                "ar": "ريأكت"
+            }
+        },
+        {
+            "Icon": "SiTailwindcss",
+            "title": {
+                "en": "Tailwind",
+                "ar": "تايلويند"
+            }
+        },
+        {
+            "Icon": "RiNextjsFill",
+            "title": {
+                "en": "Next.js",
+                "ar": "نيكست"
+            }
+        },
+        {
+            "Icon": "SiPython",
+            "title": {
+                "en": "Python",
+                "ar": "بايثون"
+            }
+        }
+    ],
+    "footerICONS": [
+        {
+            "Icon": "AiOutlineGithub",
+            "href": "https://www.github.com/MohammedSaudAlsahli",
+            "title": {
+                "en": "Github",
+                "ar": "قِت هب"
+            }
+        },
+        {
+            "Icon": "AiOutlineX",
+            "href": "https://www.x.com/MSaudAlsahli",
+            "title": {
+                "en": "X",
+                "ar": "إكس"
+            }
+        },
+        {
+            "Icon": "AiFillLinkedin",
+            "href": "https://www.linkedin.com/in/mohammed-saud-alsahli/",
+            "title": {
+                "en": "LinkedIn",
+                "ar": "لينكد إن"
+            }
+        }
+    ],
+    "links": [
+        {
+            "link": "/about",
+            "label": {
+                "en": "About",
+                "ar": "عنّي"
+            }
+        },
+        {
+            "link": "/experience",
+            "label": {
+                "en": "Experience",
+                "ar": "الخبرات"
+            }
+        },
+        {
+            "link": "/projects",
+            "label": {
+                "en": "Projects",
+                "ar": "المشاريع"
+            }
+        },
+        {
+            "link": "/contact",
+            "label": {
+                "en": "Contact",
+                "ar": "تواصل"
+            }
+        }
+    ],
+    "projectsData": [
+        {
+            "title": {
+                "en": "Project One",
+                "ar": "المشروع الأول"
+            },
+            "image": "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png",
+            "description": {
+                "en": "A cool project I built using modern technologies to solve a real-world problem. It features a robust backend and a sleek, responsive frontend.",
+                "ar": "مشروع رائع بنيته باستخدام تقنيات حديثة لحل مشكلة واقعية. يتميز بواجهة أمامية متجاوبة وباك إند قوي."
+            },
+            "tags": {
+                "en": [
+                    "React",
+                    "TypeScript",
+                    "Mantine"
+                ],
+                "ar": [
+                    "ريأكت",
+                    "تايب سكربت",
+                    "مانتين"
+                ]
+            },
+            "githubUrl": "#",
+            "liveUrl": "#"
+        },
+        {
+            "title": {
+                "en": "Project Two",
+                "ar": "المشروع الثاني"
+            },
+            "image": "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-7.png",
+            "description": {
+                "en": "Another awesome project that showcases my skills in backend and frontend development, with a focus on performance and user experience.",
+                "ar": "مشروع مميز آخر يبرز مهاراتي في تطوير الواجهة الأمامية والخلفية مع تركيز على الأداء وتجربة المستخدم."
+            },
+            "tags": {
+                "en": [
+                    "Next.js",
+                    "Node.js",
+                    "PostgreSQL"
+                ],
+                "ar": [
+                    "نيكست",
+                    "نود",
+                    "بوستجريس"
+                ]
+            },
+            "githubUrl": "#",
+            "liveUrl": null
+        },
+        {
+            "title": {
+                "en": "Project Three",
+                "ar": "المشروع الثالث"
+            },
+            "image": "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-6.png",
+            "description": {
+                "en": "An experimental project exploring the capabilities of AI and machine learning in a practical application. Built for scalability and fun.",
+                "ar": "مشروع تجريبي يستكشف قدرات الذكاء الاصطناعي وتعلّم الآلة في تطبيق عملي. بُني للتوسع والمتعة."
+            },
+            "tags": {
+                "en": [
+                    "Python",
+                    "FastAPI",
+                    "AI"
+                ],
+                "ar": [
+                    "بايثون",
+                    "فاست إيه بي آي",
+                    "ذكاء اصطناعي"
+                ]
+            },
+            "githubUrl": "#",
+            "liveUrl": "#"
+        }
+    ],
+    "workExperience": [
+        {
+            "companyName": {
+                "en": "RewaaTech",
+                "ar": "ريوة تك"
+            },
+            "companyLogo": "https://www.rewaatech.com/wp-content/uploads/2020/03/facicon-1.png",
+            "companyMainLogo": "https://www.rewaatech.com/wp-content/uploads/2020/03/new-logo.png",
+            "roles": [
+                {
+                    "position": {
+                        "en": "Sales",
+                        "ar": "مبيعات"
+                    },
+                    "period": {
+                        "en": "Feb 2024 - Aug 2024",
+                        "ar": "فبراير 2024 - أغسطس 2024"
+                    }
+                },
+                {
+                    "position": {
+                        "en": "Sales team lead",
+                        "ar": "قائد فريق المبيعات"
+                    },
+                    "period": {
+                        "en": "Aug 2024 - Feb 2025",
+                        "ar": "أغسطس 2024 - فبراير 2025"
+                    }
+                }
+            ]
+        },
+        {
+            "companyName": {
+                "en": "Retm",
+                "ar": "ريتم"
+            },
+            "companyLogo": "https://cdn.prod.website-files.com/63b47a4f00ab98da785b4d1e/63ba01faa5f15f7a996a8d6d_favicon-32x32.png",
+            "companyMainLogo": "https://cdn.prod.website-files.com/63b47a4f00ab98da785b4d1e/6402872ec142e23e71efebb1_Vectors-Wrapper.svg",
+            "roles": [
+                {
+                    "position": {
+                        "en": "Account Manager",
+                        "ar": "مدير حسابات"
+                    },
+                    "period": {
+                        "en": "Feb 2025 - Present",
+                        "ar": "فبراير 2025 - الآن"
+                    }
+                }
+            ]
+        }
+    ]
+}

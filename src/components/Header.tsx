@@ -1,8 +1,9 @@
-import { Box, Burger, Collapse, Container, Group } from "@mantine/core";
+import { Box, Burger, Collapse, Container, Group, Image } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { MantineLogo } from "@mantinex/mantine-logo";
 import { useState } from "react";
+import LOGO from "../assets/full_logo.png";
 import classes from "./HeaderSimple.module.css";
+import { LanguageToggle } from "./LanguageToggle";
 import { ThemeToggle } from "./ThemeToggle";
 
 const links = [
@@ -35,12 +36,13 @@ export const Header = () => {
 	return (
 		<Box component={"header"} className={classes.header}>
 			<Container size={"md"} className={classes.inner}>
-				<MantineLogo size={28} />
+				<Image radius="md" src={null} h={50} w={"auto"} fallbackSrc={LOGO} />
 				<Group gap={"xl"} visibleFrom={"xs"} className={classes.links}>
 					{items}
 				</Group>
 				<Group>
 					<ThemeToggle />
+					<LanguageToggle />
 					<Burger
 						opened={opened}
 						onClick={toggle}

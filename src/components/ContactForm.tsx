@@ -3,7 +3,6 @@ import {
 	Center,
 	Container,
 	SimpleGrid,
-	Stack,
 	Textarea,
 	TextInput,
 	Title,
