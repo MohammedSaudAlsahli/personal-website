@@ -7,7 +7,7 @@ import classes from "./HeaderSimple.module.css";
 
 const links = [
   { link: "/about", label: "About" },
-  { link: "/experience", label: "Experience" },
+  { link: "/expreience", label: "Expreience" },
   { link: "/projects", label: "Projects" },
   { link: "/contact", label: "Contact" },
 ];
@@ -41,7 +41,12 @@ export const Header = () => {
         </Group>
         <ThemeToggle />
 
-        <Burger opened={opened} onClick={toggle} hiddenFrom={"xs"} size={"sm"} />
+        <Burger
+          opened={opened}
+          onClick={toggle}
+          hiddenFrom={"xs"}
+          size={"sm"}
+        />
       </Container>
       <Collapse in={opened} hiddenFrom={"xs"}>
         {items}

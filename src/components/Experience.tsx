@@ -15,21 +15,21 @@ const themeIcon = Icons.map(({ Icon, title }) => (
   <ThemeIcon
     size={"lg"}
     key={title}
-    color={"gray"}
+    color={"light-dark(var(--mantine-color-black), var(--mantine-color-white))"}
     variant={"transparent"}
     title={title}
   >
-    <Icon size={28} />
+    <Icon size={32} />
   </ThemeIcon>
 ));
 
 export const Experience = () => {
   return (
-    <Center display={"flex"} style={{ flexDirection: "column", gap: "3rem" }}>
+    <Center display={"flex"} style={{ flexDirection: "column", gap: "5rem" }}>
       <Text fw={"bold"} size={"xl"}>
-        EXPREIENCED WITH
+        EXPERIENCE WITH
       </Text>
-      <Group>{themeIcon}</Group>
+      <Group gap={"lg"}>{themeIcon}</Group>
     </Center>
   );
 };

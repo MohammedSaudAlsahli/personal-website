@@ -22,7 +22,6 @@ const actionIcons = Icons.map(({ Icon, href, title }) => (
   <ActionIcon
     size={"lg"}
     key={title}
-    color={"gray"}
     variant={"default"}
     component={"a"}
     href={href}
