@@ -11,6 +11,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+
+.links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .link {

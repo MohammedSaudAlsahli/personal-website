@@ -1,9 +1,9 @@
-import { ActionIcon, Box, Container, Group } from "@mantine/core";
-import { MantineLogo } from "@mantinex/mantine-logo";
+import { ActionIcon, Box, Container, Group, Image } from "@mantine/core";
 import { AiFillLinkedin, AiOutlineGithub, AiOutlineX } from "react-icons/ai";
+import LOGO from "../assets/full_logo.png";
 import classes from "./FooterSocial.module.css";
 
-const ICONS = [
+const footerICONS = [
 	{
 		Icon: AiOutlineGithub,
 		href: "https://www.github.com/MohammedSaudAlsahli",
@@ -17,7 +17,7 @@ const ICONS = [
 	},
 ];
 
-const actionIcons = ICONS.map(({ Icon, href, title }) => (
+const actionIcons = footerICONS.map(({ Icon, href, title }) => (
 	<ActionIcon
 		size={"lg"}
 		key={title}
@@ -36,7 +36,8 @@ export const Footer = () => {
 	return (
 		<Box component={"footer"} className={classes.footer} mt={"auto"}>
 			<Container className={classes.inner}>
-				<MantineLogo size={28} />
+				<Image radius="md" src={null} h={50} w={"auto"} fallbackSrc={LOGO} />
+
 				<Group
 					gap={"sm"}
 					className={classes.links}

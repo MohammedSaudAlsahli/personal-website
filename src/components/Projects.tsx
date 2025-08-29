@@ -11,6 +11,7 @@ import {
 } from "@mantine/core";
 import { AiOutlineGithub } from "react-icons/ai";
 import { TbWorldWww } from "react-icons/tb";
+import { ContactForm } from "./ContactForm";
 
 const projectsData = [
 	{
@@ -52,37 +53,44 @@ const cards = projectsData.map((project) => (
 		padding={"lg"}
 		radius={"md"}
 		withBorder
+		style={{ display: "flex", flexDirection: "column", height: 360 }}
 	>
 		<Card.Section>
-			<Image src={project.image} height={160} alt={project.title} />
+			<Image
+				src={project.image || "https://placehold.net/default.svg"}
+				height={160}
+				alt={project.title || "Placeholder"}
+			/>
 		</Card.Section>
 
 		<Group justify={"space-between"} mt={"md"} mb={"xs"}>
-			<Text fw={500}>{project.title}</Text>
+			<Text fw={500}>{project.title || "Project Title"}</Text>
 			<Group gap={"xs"}>
 				{project.tags.map((tag) => (
-					<Badge key={tag}>{tag}</Badge>
+					<Badge key={tag || "tag"}>{tag || "Tag"}</Badge>
 				))}
 			</Group>
 		</Group>
 
 		<Text size={"sm"} c={"dimmed"} lineClamp={4}>
-			{project.description}
+			{project.description || "Description"}
 		</Text>
 
 		<Group mt={"md"}>
 			<Button
 				component={"a"}
-				href={project.githubUrl}
+				href={project.githubUrl || "#"}
 				variant={"default"}
 				leftSection={<AiOutlineGithub size={16} />}
+				target="_blank"
+				rel="noopener noreferrer"
 			>
 				GitHub
 			</Button>
 			{project.liveUrl && (
 				<Button
 					component={"a"}
-					href={project.liveUrl}
+					href={project.liveUrl || "#"}
 					leftSection={<TbWorldWww size={16} />}
 				>
 					Live Demo
@@ -98,7 +106,12 @@ export const Projects = () => {
 			<Title order={2} ta={"center"} mb={"xl"}>
 				My Projects
 			</Title>
-			<SimpleGrid cols={{ base: 1, sm: 2 }}>{cards}</SimpleGrid>
+			<SimpleGrid cols={{ base: 1, sm: 2 }}>
+				{cards}
+				<Card shadow={"sm"} padding={"lg"} radius={"md"} withBorder>
+					<ContactForm />
+				</Card>
+			</SimpleGrid>
 		</Container>
 	);
 };
