@@ -4,37 +4,39 @@ import { ActionIcon, Box, Container, Group } from "@mantine/core";
 import { MantineLogo } from "@mantinex/mantine-logo";
 import classes from "./FooterSocial.module.css";
 
+const Icons = [
+  {
+    Icon: AiOutlineGithub,
+    href: "https://www.github.com/MohammedSaudAlsahli",
+    title: "Github",
+  },
+  { Icon: AiOutlineX, href: "https://www.x.com/MSaudAlsahli", title: "X" },
+  {
+    Icon: AiFillLinkedin,
+    href: "https://www.linkedin.com/in/mohammed-saud-alsahli/",
+    title: "Linkedin",
+  },
+];
+
+const actionIcons = Icons.map(({ Icon, href, title }) => (
+  <ActionIcon
+    size={"lg"}
+    key={title}
+    color={"gray"}
+    variant={"default"}
+    component={"a"}
+    href={href}
+    target={"_blank"}
+    rel={"noopener noreferrer"}
+    title={title}
+  >
+    <Icon size={18} />
+  </ActionIcon>
+));
+
 export const Footer = () => {
-  const Icons = [
-    {
-      Icon: AiOutlineGithub,
-      href: "https://www.github.com/MohammedSaudAlsahli",
-      title: "Github",
-    },
-    { Icon: AiOutlineX, href: "https://www.x.com/MSaudAlsahli", title: "X" },
-    {
-      Icon: AiFillLinkedin,
-      href: "https://www.linkedin.com/in/mohammed-saud-alsahli/",
-      title: "Linkedin",
-    },
-  ];
-  const actionIcons = Icons.map(({ Icon, href, title }) => (
-    <ActionIcon
-      size={"lg"}
-      key={title}
-      color={"gray"}
-      variant={"default"}
-      component={"a"}
-      href={href}
-      target={"_blank"}
-      rel={"noopener noreferrer"}
-      title={title}
-    >
-      <Icon size={18} />
-    </ActionIcon>
-  ));
   return (
-    <Box component="footer" className={classes.footer} mt="auto">
+    <Box component={"footer"} className={classes.footer} mt={"auto"}>
       <Container className={classes.inner}>
         <MantineLogo size={28} />
         <Group

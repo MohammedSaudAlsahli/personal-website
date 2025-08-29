@@ -1,15 +1,15 @@
 import { ThemeToggle } from "./ThemeToggle";
 import { useState } from "react";
-import { Burger, Container, Group, Collapse } from "@mantine/core";
+import { Burger, Container, Group, Collapse, Box } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { MantineLogo } from "@mantinex/mantine-logo";
 import classes from "./HeaderSimple.module.css";
 
 const links = [
-  { link: "/about", label: "Features" },
-  { link: "/pricing", label: "Pricing" },
-  { link: "/learn", label: "Learn" },
-  { link: "/community", label: "Community" },
+  { link: "/about", label: "About" },
+  { link: "/experience", label: "Experience" },
+  { link: "/projects", label: "Projects" },
+  { link: "/contact", label: "Contact" },
 ];
 
 export const Header = () => {
@@ -33,19 +33,19 @@ export const Header = () => {
   ));
 
   return (
-    <header className={classes.header}>
-      <Container size="md" className={classes.inner}>
+    <Box component={"header"} className={classes.header}>
+      <Container size={"md"} className={classes.inner}>
         <MantineLogo size={28} />
-        <Group gap={5} visibleFrom="xs">
+        <Group gap={"xl"} visibleFrom={"xs"}>
           {items}
         </Group>
         <ThemeToggle />
 
-        <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
+        <Burger opened={opened} onClick={toggle} hiddenFrom={"xs"} size={"sm"} />
       </Container>
-      <Collapse in={opened} hiddenFrom="xs">
+      <Collapse in={opened} hiddenFrom={"xs"}>
         {items}
       </Collapse>
-    </header>
+    </Box>
   );
 };
