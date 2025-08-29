@@ -8,7 +8,7 @@ const aboutData = {
 
 export const About = () => {
   return (
-    <Container my="xl" py="xl">
+    <Container my="xl">
       <Stack align="center" gap="xl">
         <Title order={1} ta="center">
           {aboutData.catchyLine}
