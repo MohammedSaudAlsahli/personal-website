@@ -1,25 +1,26 @@
 import { Box, Burger, Collapse, Container, Group, Image } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { useState } from "react";
-import LOGO from "../assets/full_logo.png";
+import { useTranslation } from "react-i18next";
+import LOGO from "../assets/short_logo.png";
 import classes from "./HeaderSimple.module.css";
 import { LanguageToggle } from "./LanguageToggle";
 import { ThemeToggle } from "./ThemeToggle";
 
-const links = [
-	{ link: "/about", label: "About" },
-	{ link: "/expreience", label: "Expreience" },
-	{ link: "/projects", label: "Projects" },
-	{ link: "/contact", label: "Contact" },
-];
-
 export const Header = () => {
+	const { t } = useTranslation();
+	const links = t("header.links", { returnObjects: true }) as {
+		link: string;
+		label: string;
+	}[];
+
 	const [opened, { toggle, close }] = useDisclosure(false);
 	const [active, setActive] = useState(links[0].link);
 
 	const items = links.map((link) => (
 		<a
 			key={link.label}
+			title={link.label}
 			href={link.link}
 			className={classes.link}
 			data-active={active === link.link || undefined}
@@ -36,7 +37,7 @@ export const Header = () => {
 	return (
 		<Box component={"header"} className={classes.header}>
 			<Container size={"md"} className={classes.inner}>
-				<Image radius="md" src={null} h={50} w={"auto"} fallbackSrc={LOGO} />
+				<Image radius="md" src={null} h={35} w={"auto"} fallbackSrc={LOGO} />
 				<Group gap={"xl"} visibleFrom={"xs"} className={classes.links}>
 					{items}
 				</Group>

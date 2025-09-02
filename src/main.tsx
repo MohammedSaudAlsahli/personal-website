@@ -7,6 +7,8 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { App } from "./App.tsx";
 
+import "./utils/i18n.ts";
+
 const root = document.getElementById("root");
 if (!root) throw new Error("Root element not found");
 

@@ -9,7 +9,10 @@ import {
 } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import { notifications } from "@mantine/notifications";
+import { useTranslation } from "react-i18next";
+
 export const ContactForm = () => {
+	const { t } = useTranslation();
 	const form = useForm({
 		initialValues: {
 			name: "",
@@ -19,12 +22,13 @@ export const ContactForm = () => {
 		},
 		validate: {
 			name: (value) =>
-				/^\S+@\S+\.\S+$/.test(value) ? "Name cannot be an email" : null,
-			email: (value) => (/^\S+@\S+$/.test(value) ? null : "Invalid email"),
+				/^\S+@\S+\.\S+$/.test(value) ? t("contactForm.err.name") : null,
+			email: (value) =>
+				/^\S+@\S+$/.test(value) ? null : t("contactForm.err.email"),
 			subject: (value) =>
-				value.trim().length === 0 ? "Subject is required" : null,
+				value.trim().length === 0 ? t("contactForm.err.subject") : null,
 			message: (value) =>
-				value.trim().length === 0 ? "Message is required" : null,
+				value.trim().length === 0 ? t("contactForm.err.message") : null,
 		},
 	});
 
@@ -43,23 +47,24 @@ export const ContactForm = () => {
 
 			if (response.ok) {
 				notifications.show({
-					title: "Success!",
-					message: "Your message has been sent successfully",
-					color: "green",
+					title: t("contactForm.notification.success.title"),
+					message: t("contactForm.notification.success.message"),
+					color: t("contactForm.notification.success.color"),
 				});
 				form.reset();
 			} else {
 				notifications.show({
-					title: "Error",
-					message: "Failed to send message",
-					color: "red",
+					title: t("contactForm.notification.err.title"),
+					message: t("contactForm.notification.err.message"),
+					color: t("contactForm.notification.err.color"),
 				});
 			}
-		} catch (error) {
+			// eslint-disable-next-line @typescript-eslint/no-unused-vars
+		} catch (_err) {
 			notifications.show({
-				title: "Error",
-				message: `${error}`,
-				color: "red",
+				title: t("contactForm.notification.else.title"),
+				message: t("contactForm.notification.else.message"),
+				color: t("contactForm.notification.else.color"),
 			});
 		}
 	};
@@ -67,36 +72,36 @@ export const ContactForm = () => {
 	return (
 		<Container>
 			<Title order={2} ta="center">
-				Contact Me
+				{t("contactForm.container.title")}
 			</Title>
 			<form onSubmit={form.onSubmit(handleSubmit)}>
 				<SimpleGrid cols={2} spacing="md">
 					<TextInput
-						title="Name"
-						label="Name"
-						placeholder="Your name"
+						title={t("contactForm.container.form.name.title")}
+						label={t("contactForm.container.form.name.label")}
+						placeholder={t("contactForm.container.form.name.placeholder")}
 						required
 						{...form.getInputProps("name")}
 					/>
 					<TextInput
-						title="Email"
-						label="Email"
-						placeholder="your@email.com"
+						title={t("contactForm.container.form.email.title")}
+						label={t("contactForm.container.form.email.label")}
+						placeholder={t("contactForm.container.form.email.placeholder")}
 						required
 						{...form.getInputProps("email")}
 					/>
 				</SimpleGrid>
 				<TextInput
-					title="Subject"
-					label="Subject"
-					placeholder="Subject"
+					title={t("contactForm.container.form.subject.title")}
+					label={t("contactForm.container.form.subject.label")}
+					placeholder={t("contactForm.container.form.subject.placeholder")}
 					required
 					{...form.getInputProps("subject")}
 				/>
 				<Textarea
-					title="Message"
-					label="Message"
-					placeholder="Your message"
+					title={t("contactForm.container.form.message.title")}
+					label={t("contactForm.container.form.message.label")}
+					placeholder={t("contactForm.container.form.message.placeholder")}
 					required
 					autosize
 					minRows={3}
@@ -104,7 +109,7 @@ export const ContactForm = () => {
 				/>
 				<Center>
 					<Button type="submit" mt="md">
-						Send Message
+						{t("contactForm.container.button")}
 					</Button>
 				</Center>
 			</form>

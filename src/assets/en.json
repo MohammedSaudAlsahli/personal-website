@@ -1,0 +1,205 @@
+{
+    "contactForm": {
+        "err": {
+            "name": "Name cannot be an email",
+            "email": "Invalid email",
+            "subject": "Subject is required",
+            "message": "Message is required"
+        },
+        "notification": {
+            "success": {
+                "title": "Success!",
+                "message": "Your message has been sent successfully",
+                "color": "green"
+            },
+            "err": {
+                "title": "Error",
+                "message": "Failed to send message",
+                "color": "red"
+            },
+            "else": {
+                "title": "Error",
+                "message": "Something went wrong",
+                "color": "red"
+            }
+        },
+        "container": {
+            "title": "Contact Me",
+            "button": "Send Message",
+            "form": {
+                "name": {
+                    "title": "Name",
+                    "label": "Name",
+                    "placeholder": "Your name"
+                },
+                "email": {
+                    "title": "Email",
+                    "label": "Email",
+                    "placeholder": "your@email.com"
+                },
+                "subject": {
+                    "title": "Subject",
+                    "label": "Subject",
+                    "placeholder": "Subject"
+                },
+                "message": {
+                    "title": "Message",
+                    "label": "Message",
+                    "placeholder": "Your message"
+                }
+            }
+        }
+    },
+    "about": {
+        "catchyLine": "I build SaaS apps and experiment with AI models!",
+        "description": "I’m a passionate software developer exploring the intersection of AI and modern web development. My focus is on creating scalable SaaS applications and integrating AI-powered features to solve real-world problems."
+    },
+    "experience": {
+        "container": {
+            "title": "EXPERIENCED WITH",
+            "icons": [
+                {
+                    "icon": "SiHtml5",
+                    "title": "HTML"
+                },
+                {
+                    "icon": "FaJsSquare",
+                    "title": "Javascript"
+                },
+                {
+                    "icon": "RiReactjsFill",
+                    "title": "React.js"
+                },
+                {
+                    "icon": "SiTailwindcss",
+                    "title": "Tailwind"
+                },
+                {
+                    "icon": "RiNextjsFill",
+                    "title": "Next.js"
+                },
+                {
+                    "icon": "SiPython",
+                    "title": "Python"
+                }
+            ]
+        }
+    },
+    "footer": {
+        "rights": "All rights reserved ",
+        "icons": [
+            {
+                "icon": "AiOutlineGithub",
+                "href": "https://www.github.com/MohammedSaudAlsahli",
+                "title": "Github"
+            },
+            {
+                "icon": "AiOutlineX",
+                "href": "https://www.x.com/MSaudAlsahli",
+                "title": "X"
+            },
+            {
+                "icon": "AiFillLinkedin",
+                "href": "https://www.linkedin.com/in/mohammed-saud-alsahli/",
+                "title": "LinkedIn"
+            }
+        ]
+    },
+    "header": {
+        "links": [
+            {
+                "link": "/about",
+                "label": "About"
+            },
+            {
+                "link": "/experience",
+                "label": "Experience"
+            },
+            {
+                "link": "/projects",
+                "label": "Projects"
+            },
+            {
+                "link": "/contact",
+                "label": "Contact"
+            }
+        ]
+    },
+    "projects": {
+        "myProjects": "My Projects",
+        "demo": "Live Demo",
+        "description": "Description",
+        "github": "GitHub",
+        "placeholder": "Placeholder",
+        "title": "Project title",
+        "project": [
+            {
+                "title": "Project One",
+                "image": "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png",
+                "description": "A cool project I built using modern technologies to solve a real-world problem. It features a robust backend and a sleek, responsive frontend.",
+                "tags": [
+                    "React",
+                    "TypeScript",
+                    "Mantine"
+                ],
+                "githubUrl": "#",
+                "liveUrl": "#"
+            },
+            {
+                "title": "Project Two",
+                "image": "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-7.png",
+                "description": "Another awesome project that showcases my skills in backend and frontend development, with a focus on performance and user experience.",
+                "tags": [
+                    "Next.js",
+                    "Node.js",
+                    "PostgreSQL"
+                ],
+                "githubUrl": "#",
+                "liveUrl": null
+            },
+            {
+                "title": "Project Three",
+                "image": "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-6.png",
+                "description": "An experimental project exploring the capabilities of AI and machine learning in a practical application. Built for scalability and fun.",
+                "tags": [
+                    "Python",
+                    "FastAPI",
+                    "AI"
+                ],
+                "githubUrl": "#",
+                "liveUrl": "#"
+            }
+        ]
+    },
+    "workExperience": {
+        "workedIn": "Worked in",
+        "companies": [
+            {
+                "companyName": "RewaaTech",
+                "companyLogo": "https://www.rewaatech.com/wp-content/uploads/2020/03/facicon-1.png",
+                "companyMainLogo": "https://www.rewaatech.com/wp-content/uploads/2020/03/new-logo.png",
+                "roles": [
+                    {
+                        "position": "Sales",
+                        "period": "Feb 2024 - Aug 2024"
+                    },
+                    {
+                        "position": "Sales team lead",
+                        "period": "Aug 2024 - Feb 2025"
+                    }
+                ]
+            },
+            {
+                "companyName": "Retm",
+                "companyLogo": "https://cdn.prod.website-files.com/63b47a4f00ab98da785b4d1e/63ba01faa5f15f7a996a8d6d_favicon-32x32.png",
+                "companyMainLogo": "https://cdn.prod.website-files.com/63b47a4f00ab98da785b4d1e/6402872ec142e23e71efebb1_Vectors-Wrapper.svg",
+                "roles": [
+                    {
+                        "position": "Account Manager",
+                        "period": "Feb 2025 - Present"
+                    }
+                ]
+            }
+        ]
+    }
+}

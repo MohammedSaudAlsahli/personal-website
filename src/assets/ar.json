@@ -1,0 +1,205 @@
+{
+    "contactForm": {
+        "err": {
+            "name": "الاسم لا يمكن أن يكون بريدًا إلكترونيًا",
+            "email": "البريد الإلكتروني غير صالح",
+            "subject": "الموضوع مطلوب",
+            "message": "الرسالة مطلوبة"
+        },
+        "notification": {
+            "success": {
+                "title": "نجاح!",
+                "message": "تم إرسال رسالتك بنجاح",
+                "color": "green"
+            },
+            "err": {
+                "title": "خطأ",
+                "message": "فشل في إرسال الرسالة",
+                "color": "red"
+            },
+            "else": {
+                "title": "خطأ",
+                "message": "حدث خطأ ما",
+                "color": "red"
+            }
+        },
+        "container": {
+            "title": "تواصل معي",
+            "button": "إرسال الرسالة",
+            "form": {
+                "name": {
+                    "title": "الاسم",
+                    "label": "الاسم",
+                    "placeholder": "اكتب اسمك"
+                },
+                "email": {
+                    "title": "البريد الإلكتروني",
+                    "label": "البريد الإلكتروني",
+                    "placeholder": "your@email.com"
+                },
+                "subject": {
+                    "title": "الموضوع",
+                    "label": "الموضوع",
+                    "placeholder": "اكتب موضوعك"
+                },
+                "message": {
+                    "title": "الرسالة",
+                    "label": "الرسالة",
+                    "placeholder": "اكتب رسالتك"
+                }
+            }
+        }
+    },
+    "about": {
+        "catchyLine": "أبني تطبيقات SaaS وأجرب نماذج الذكاء الاصطناعي!",
+        "description": "أنا مطوّر برمجيات شغوف أستكشف التقاطع بين الذكاء الاصطناعي وتطوير الويب الحديث. تركيزي على بناء تطبيقات SaaS قابلة للتوسع ودمج ميزات مدعومة بالذكاء الاصطناعي لحل مشكلات واقعية."
+    },
+    "experience": {
+        "container": {
+            "title": "الخبرات",
+            "icons": [
+                {
+                    "icon": "SiHtml5",
+                    "title": "إتش تي إم إل"
+                },
+                {
+                    "icon": "FaJsSquare",
+                    "title": "جافاسكربت"
+                },
+                {
+                    "icon": "RiReactjsFill",
+                    "title": "ريأكت"
+                },
+                {
+                    "icon": "SiTailwindcss",
+                    "title": "تايلويند"
+                },
+                {
+                    "icon": "RiNextjsFill",
+                    "title": "نيكست"
+                },
+                {
+                    "icon": "SiPython",
+                    "title": "بايثون"
+                }
+            ]
+        }
+    },
+    "footer": {
+        "rights": "جميع الحقوق محفوظة ",
+        "icons": [
+            {
+                "icon": "AiOutlineGithub",
+                "href": "https://www.github.com/MohammedSaudAlsahli",
+                "title": "قِت هب"
+            },
+            {
+                "icon": "AiOutlineX",
+                "href": "https://www.x.com/MSaudAlsahli",
+                "title": "إكس"
+            },
+            {
+                "icon": "AiFillLinkedin",
+                "href": "https://www.linkedin.com/in/mohammed-saud-alsahli/",
+                "title": "لينكد إن"
+            }
+        ]
+    },
+    "header": {
+        "links": [
+            {
+                "link": "/about",
+                "label": "عنّي"
+            },
+            {
+                "link": "/experience",
+                "label": "الخبرات"
+            },
+            {
+                "link": "/projects",
+                "label": "المشاريع"
+            },
+            {
+                "link": "/contact",
+                "label": "تواصل"
+            }
+        ]
+    },
+    "projects": {
+        "demo": "تجربة التطبيق",
+        "github": "قِت هب",
+        "placeholder": "مُحتوى مؤقت",
+        "title": "اسم المشروع",
+        "description": "وصف المشروع",
+        "myProjects": "مشاريعي",
+        "project": [
+            {
+                "title": "المشروع الأول",
+                "image": "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png",
+                "description": "مشروع رائع بنيته باستخدام تقنيات حديثة لحل مشكلة واقعية. يتميز بواجهة أمامية متجاوبة وباك إند قوي.",
+                "tags": [
+                    "ريأكت",
+                    "تايب سكربت",
+                    "مانتين"
+                ],
+                "githubUrl": "#",
+                "liveUrl": "#"
+            },
+            {
+                "title": "المشروع الثاني",
+                "image": "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-7.png",
+                "description": "مشروع مميز آخر يبرز مهاراتي في تطوير الواجهة الأمامية والخلفية مع تركيز على الأداء وتجربة المستخدم.",
+                "tags": [
+                    "نيكست",
+                    "نود",
+                    "بوستجريس"
+                ],
+                "githubUrl": "#",
+                "liveUrl": null
+            },
+            {
+                "title": "المشروع الثالث",
+                "image": "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-6.png",
+                "description": "مشروع تجريبي يستكشف قدرات الذكاء الاصطناعي وتعلّم الآلة في تطبيق عملي. بُني للتوسع والمتعة.",
+                "tags": [
+                    "بايثون",
+                    "فاست إيه بي آي",
+                    "ذكاء اصطناعي"
+                ],
+                "githubUrl": "#",
+                "liveUrl": "#"
+            }
+        ]
+    },
+    "workExperience": {
+        "workedIn": "عملت في",
+        "companies": [
+            {
+                "companyName": "رواء تك",
+                "companyLogo": "https://www.rewaatech.com/wp-content/uploads/2020/03/facicon-1.png",
+                "companyMainLogo": "https://www.rewaatech.com/wp-content/uploads/2020/03/new-logo.png",
+                "roles": [
+                    {
+                        "position": "مبيعات",
+                        "period": "فبراير 2024 - أغسطس 2024"
+                    },
+                    {
+                        "position": "قائد فريق المبيعات",
+                        "period": "أغسطس 2024 - فبراير 2025"
+                    }
+                ]
+            },
+            {
+                "companyName": "رتم تك",
+                "companyLogo": "https://cdn.prod.website-files.com/63b47a4f00ab98da785b4d1e/63ba01faa5f15f7a996a8d6d_favicon-32x32.png",
+                "companyMainLogo": "https://cdn.prod.website-files.com/63b47a4f00ab98da785b4d1e/6402872ec142e23e71efebb1_Vectors-Wrapper.svg",
+                "roles": [
+                    {
+                        "position": "مدير حسابات",
+                        "period": "فبراير 2025 - الآن"
+                    }
+                ]
+            }
+        ]
+    }
+}
