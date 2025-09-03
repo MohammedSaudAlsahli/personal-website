@@ -82,7 +82,7 @@ export const Projects = () => {
 	));
 
 	return (
-		<Container my={"xl"} py={"xl"}>
+		<Container my={"xl"} py={"xl"} component={"section"} id={"projects"}>
 			<Title order={2} ta={"center"} mb={"xl"}>
 				{t("projects.myProjects")}
 			</Title>

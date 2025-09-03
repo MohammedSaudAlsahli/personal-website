@@ -36,7 +36,12 @@ export const Footer = () => {
 	});
 	const year = new Date().getFullYear();
 	return (
-		<Box component={"footer"} className={classes.footer} mt={"auto"}>
+		<Box
+			component={"footer"}
+			className={classes.footer}
+			mt={"auto"}
+			id={"contact"}
+		>
 			<Container className={classes.inner}>
 				<Image radius="md" src={null} h={50} w={"auto"} fallbackSrc={LOGO} />
 				<Text>

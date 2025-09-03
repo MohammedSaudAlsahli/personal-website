@@ -108,19 +108,19 @@
     "header": {
         "links": [
             {
-                "link": "/about",
+                "link": "#about",
                 "label": "عنّي"
             },
             {
-                "link": "/experience",
+                "link": "#experience",
                 "label": "الخبرات"
             },
             {
-                "link": "/projects",
+                "link": "#projects",
                 "label": "المشاريع"
             },
             {
-                "link": "/contact",
+                "link": "#contact",
                 "label": "تواصل"
             }
         ]

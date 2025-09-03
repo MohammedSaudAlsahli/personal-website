@@ -108,19 +108,19 @@
     "header": {
         "links": [
             {
-                "link": "/about",
+                "link": "#about",
                 "label": "About"
             },
             {
-                "link": "/experience",
+                "link": "#experience",
                 "label": "Experience"
             },
             {
-                "link": "/projects",
+                "link": "#projects",
                 "label": "Projects"
             },
             {
-                "link": "/contact",
+                "link": "#contact",
                 "label": "Contact"
             }
         ]

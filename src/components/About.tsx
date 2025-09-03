@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 export const About = () => {
 	const { t } = useTranslation();
 	return (
-		<Container my={"xl"} pb={"xl"}>
+		<Container my={"xl"} pb={"xl"} component={"section"} id={"about"}>
 			<Stack align={"center"} gap={"xl"}>
 				<Title order={1} ta={"center"}>
 					{t("about.catchyLine")}

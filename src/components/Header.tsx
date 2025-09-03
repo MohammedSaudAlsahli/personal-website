@@ -26,6 +26,10 @@ export const Header = () => {
 			data-active={active === link.link || undefined}
 			onClick={(event) => {
 				event.preventDefault();
+				const section = document.querySelector(link.link);
+				if (section) {
+					section.scrollIntoView({ behavior: "smooth" });
+				}
 				setActive(link.link);
 				close();
 			}}
@@ -35,7 +39,15 @@ export const Header = () => {
 	));
 
 	return (
-		<Box component={"header"} className={classes.header}>
+		<Box
+			component={"header"}
+			className={classes.header}
+			style={{
+				position: "sticky",
+				top: 0,
+				zIndex: 1000,
+			}}
+		>
 			<Container size={"md"} className={classes.inner}>
 				<Image radius="md" src={null} h={35} w={"auto"} fallbackSrc={LOGO} />
 				<Group gap={"xl"} visibleFrom={"xs"} className={classes.links}>

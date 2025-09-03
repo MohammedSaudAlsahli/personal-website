@@ -35,7 +35,7 @@ export const Experience = () => {
 		);
 	});
 	return (
-		<Container my={"xl"} py={"xl"}>
+		<Container my={"xl"} py={"xl"} component={"section"} id={"experience"}>
 			<Stack align={"center"} gap={"xl"}>
 				<Title order={2} ta={"center"}>
 					{t("experience.container.title")}
