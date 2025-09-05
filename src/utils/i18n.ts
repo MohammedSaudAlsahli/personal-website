@@ -1,24 +1,26 @@
 import i18n from "i18next";
+import HttpBackend from "i18next-http-backend";
 import { initReactI18next } from "react-i18next";
-import ar from "./locals/ar.json";
-import en from "./locals/en.json";
 
-const resources = {
-  en: {
-    translation: en,
-  },
-  ar: {
-    translation: ar,
-  },
-};
+const savedLang = localStorage.getItem("lang") || "en";
+const savedDir =
+  localStorage.getItem("dir") || (savedLang === "ar" ? "rtl" : "ltr");
 
-i18n.use(initReactI18next).init({
-  resources,
-  lng: "en",
+document.documentElement.dir = savedDir;
 
-  interpolation: {
-    escapeValue: false,
-  },
-});
+i18n
+  .use(HttpBackend)
+  .use(initReactI18next)
+  .init({
+    lng: savedLang,
+    fallbackLng: "en",
+    backend: {
+      loadPath: (lng: string) =>
+        `https://raw.githubusercontent.com/MohammedSaudAlsahli/locals/refs/heads/main/personal-website/${lng}.json?v=${Date.now()}`,
+    },
+    interpolation: {
+      escapeValue: false,
+    },
+  });
 
 export default i18n;

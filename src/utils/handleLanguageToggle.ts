@@ -1,16 +1,21 @@
 import type { i18n as I18nType } from "i18next";
 
 interface ToggleProps {
-  dir: "ltr" | "rtl";
   i18n: I18nType;
   toggleDirection: () => void;
 }
 
-export const handleToggle = ({ dir, i18n, toggleDirection }: ToggleProps) => {
-  if (dir === "rtl") {
-    i18n.changeLanguage("en");
-  } else {
-    i18n.changeLanguage("ar");
-  }
-  toggleDirection();
+export const handleToggle = ({ i18n, toggleDirection }: ToggleProps) => {
+  const isArabic = i18n.language === "ar";
+  const newLang = isArabic ? "en" : "ar";
+  const newDir = isArabic ? "ltr" : "rtl";
+
+  i18n.changeLanguage(newLang).then(() => {
+    localStorage.setItem("lang", newLang);
+    localStorage.setItem("dir", newDir);
+
+    document.documentElement.dir = newDir;
+
+    toggleDirection();
+  });
 };

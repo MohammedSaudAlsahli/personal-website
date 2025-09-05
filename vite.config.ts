@@ -1,12 +1,11 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: '/',
+  base: "/",
   plugins: [react()],
   build: {
-    minify: 'terser',
-    terserOptions: {} as any, // ✅ تجاوز كامل لـ TypeScript
-  }
+    minify: "terser",
+    terserOptions: {} as any,
+  },
 });
-

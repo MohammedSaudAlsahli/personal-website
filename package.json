@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -C CNAME"
   },
   "dependencies": {
     "@mantine/core": "^8.2.8",
@@ -16,7 +16,8 @@
     "@mantine/hooks": "^8.2.8",
     "@mantine/notifications": "^8.2.8",
     "@mantine/nprogress": "^8.2.8",
-    "i18next": "^25.4.2",
+    "i18next": "^25.5.0",
+    "i18next-http-backend": "^3.0.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-i18next": "^15.7.3",
